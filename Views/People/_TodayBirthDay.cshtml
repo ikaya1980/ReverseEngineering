@@ -1,0 +1,19 @@
+﻿@model Person
+@using ReverseEngineering.Models
+
+
+    <div style="width:100%;margin-top:25px;box-shadow:0 0 5px gray;padding:25px;">
+        <strong>Adı</strong> @Model.FirstName<br />
+        <strong>Soyadı</strong> @Model.LastName<br />
+        <strong>Dağum Tarihi</strong> @Model.Employee.BirthDate.ToString("d.M.yyyy")<br />
+        @*<strong>Cinsiyet</strong> @Model.Employee.Gender<br />*@
+        <p><strong>DOĞUM GÜNÜN KUTLU OLSUN</strong></p>
+        @if (Model.Employee.Gender == "F")
+        {
+            <img style="width:50px; height:auto" src="~/images/pinkcake.jpg" />
+        }
+        else if (Model.Employee.Gender == "M")
+        {
+            <img style="width:50px; height:auto" src="~/images/bluecake.jpg" />
+        }
+    </div>
